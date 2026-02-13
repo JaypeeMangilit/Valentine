@@ -240,18 +240,19 @@ button:active {
 }
 
 .photo-row {
-   display: flex !important;
-   overflow: auto !important;
+   display: flex !important;           /* Forces items into a line */
+   overflow-x: auto !important;        /* Enables left/right scrolling */
+   width: 100% !important;             /* Takes full width of the phone */
+   padding: 10px 0 30px 0 !important;  /* Space for shadow & scroll */
    gap: 15px !important;
-   padding: 20px 10px !important;
-   scroll-snap-type: x mandatory !important;
-   -webkit-overflow-scrolling: touch !important;
 }
 
 .photo-row .paper-texture {
-   flex: 0 0 250px !important;
-   scroll-snap-align: center !important;
-   margin: 0 !important;
+   min-width: 240px !important;  /* CRITICAL: Stops them from squishing! */
+   width: 240px !important;      
+   margin: 0 !important;         /* Removes the "auto" centering */
+   flex-shrink: 0 !important;    /* Forces them to stay full size */
+   scroll-snap-align: center;
 }
 
 .photo-row::-webkit-scrollbar {
@@ -559,6 +560,7 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
 
 
 
