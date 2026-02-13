@@ -1,17 +1,17 @@
 // ======================================================
 // 1. CONFIGURATION
 // ======================================================
-const CORRECT_PASSWORD = "Mhel"; 
-const START_DATE = new Date("2025-10-18"); // Your start date
+const CORRECT_PASSWORD = "Jaypee"; 
+const START_DATE = new Date("2024-12-08"); // Your start date
 
 // THE 1000 REASONS DATA
 const loveNotes = [
-    "1. I love that we clicked and connected so quick when we first started talking",
-    "2. I love that she cares about me",
-    "3. I love that she always misses me like how I always miss her",
-    "4. I love that we can both communicate",
-    "5. I love that she always makes me special",
-    "6. I love that she treats me as her baby🥺",
+    "1. I love that our first met",
+    "2. I love that how she cares for me",
+    "3. I love that how always she misses me like how I always miss her",
+    "4. I love that we can communicate to each other",
+    "5. I love that she always makes me happy and special",
+    "6. I love that she treats me as her baby HAHA",
     "7. I love that she can feel when there's something wrong with my mood",
     "8. I love that she always makes time with me whenever she can",
     "9. I love it when she calls me cute nicknames",
@@ -553,4 +553,5 @@ function closeAllReasons() {
 // ======================================================
 function logout() {
     location.reload();
+
 }
