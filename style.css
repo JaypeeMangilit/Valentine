@@ -283,6 +283,29 @@ button:active {
    border: 1px solid #eee !important;
 }
 
+/* --- PHOTO GRID (All at once) --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns side-by-side */
+    gap: 10px;                             /* Space between photos */
+    padding: 10px;
+    justify-items: center;
+}
+
+/* Make the Polaroid boxes smaller so they fit 2-per-row */
+.photo-grid .paper-texture {
+    width: 140px !important;               /* Smaller width for grid view */
+    margin: 5px !important;
+    padding: 5px !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Ensure the 5th photo (the odd one out) looks okay */
+.photo-grid .paper-texture:last-child {
+    grid-column: span 2;                   /* Makes the last photo centered */
+    width: 160px !important;
+}
+
 /* --- GALLERY GRID --- */
 .gallery-grid {
     display: grid;
@@ -569,6 +592,7 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
 
 
 
