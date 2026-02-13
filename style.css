@@ -238,6 +238,30 @@ button:active {
    transition: transform 0.3 ease !important;
    overflow: hidden !important;
 }
+
+.photo-row {
+   display: flex;
+   overflow: auto;
+   gap: 15px;
+   padding: 20px 10px;
+   scroll-snap-type: x mandatory;
+   -webkit-overflow-scrolling: touch;
+}
+
+.photo-row .paper-texture {
+   flex: 0 0 250px;
+   scroll-snap-align: center;
+   margin: 0;
+}
+
+.photo-row::-webkit-scrollbar {
+   display: nonde;
+}
+
+.photo-row {
+   -ms-overflow-style: none;
+   scrollbar-width: none;
+}
 .paper-texture:hover {
     transform: rotate(-2deg) scale(1.02);
 }
@@ -535,6 +559,7 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
 
 
 
