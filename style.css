@@ -227,16 +227,16 @@ button:active {
 }
 
 /* --- PAPER TEXTURE --- */
-.paper-texture {
-   width: 250px;
-   max-width: 90%;
-   margin: 20px auto;
-   padding: 10px;
-   background: #fff;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-   cursor: pointer;
-   transition: transform 0.3 ease;
-   overflow: hidden;
+#slide-2 .paper-texture {
+   width: 250px !important;
+   max-width: 90% !important;
+   margin: 20px auto !important;
+   padding: 10px !important;
+   background: #fff !important;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+   cursor: pointer !important;
+   transition: transform 0.3 ease !important;
+   overflow: hidden !important;
 }
 .paper-texture:hover {
     transform: rotate(-2deg) scale(1.02);
@@ -244,9 +244,9 @@ button:active {
 
 .Photo-img {
    width: 100% !important;
-   height: auto;
-   display: block;
-   border: 1px solid #eee;
+   height: auto !important;
+   display: block !important;
+   border: 1px solid #eee !important;
 }
 
 /* --- GALLERY GRID --- */
@@ -535,6 +535,7 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
 
 
 
