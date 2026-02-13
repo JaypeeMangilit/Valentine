@@ -239,49 +239,6 @@ button:active {
    overflow: hidden !important;
 }
 
-/* --- CAROUSEL ARROW STYLES --- */
-.carousel-wrapper {
-    position: relative;     /* Allows arrows to sit on top */
-    width: 100%;
-    display: flex;
-    align-items: center;    /* Vertically centers arrows */
-}
-
-.scroll-arrow {
-    background: rgba(255, 255, 255, 0.7); /* See-through white */
-    border: 2px solid var(--love-pink);
-    color: var(--love-pink);
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;     /* Makes them round */
-    cursor: pointer;
-    z-index: 10;            /* Ensures they sit ON TOP of photos */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;              /* Reset default button margin */
-    padding: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-}
-
-.scroll-arrow:active {
-    transform: scale(0.9);
-    background: white;
-}
-
-/* Position them slightly outside or on edge */
-.left-arrow {
-    position: absolute;
-    left: 0;
-}
-
-.right-arrow {
-    position: absolute;
-    right: 0;
-}
-
 .photo-row {
    display: flex !important;           /* Forces items into a line */
    overflow-x: auto !important;        /* Enables left/right scrolling */
@@ -603,6 +560,7 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
 
 
 
