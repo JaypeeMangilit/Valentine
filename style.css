@@ -234,10 +234,17 @@ button:active {
    background: #fff;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
    cursor: pointer;
+   transition: transform 0.3 ease;
 }
-.letter-img {
-    width: 100%;
-    border-radius: 5px;
+.paper-texture:hover {
+    transform: rotate(-2deg) scale(1.02);
+}
+
+.Photo-img {
+   width: 100% !important;
+   height: auto;
+   display: block;
+   border: 1px solid #eee;
 }
 
 /* --- GALLERY GRID --- */
@@ -526,4 +533,5 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
 
