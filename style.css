@@ -229,12 +229,14 @@ button:active {
 /* --- PAPER TEXTURE --- */
 .paper-texture {
    width: 250px;
+   max-width: 90%;
    margin: 20px auto;
    padding: 10px;
    background: #fff;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
    cursor: pointer;
    transition: transform 0.3 ease;
+   overflow: hidden;
 }
 .paper-texture:hover {
     transform: rotate(-2deg) scale(1.02);
@@ -533,5 +535,6 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
 
 
