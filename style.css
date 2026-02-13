@@ -239,24 +239,33 @@ button:active {
    overflow: hidden !important;
 }
 
+/* Container that prevents the page from getting wider than the phone */
+.photo-row-container {
+    width: 100%;
+    overflow-x: auto; /* Allows side-to-side scrolling */
+    display: block;
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iPhone */
+}
+
+/* The actual row of photos */
 .photo-row {
-   display: flex !important;           /* Forces items into a line */
-   overflow-x: auto !important;        /* Enables left/right scrolling */
-   width: 100% !important;             /* Takes full width of the phone */
-   padding: 10px 0 30px 0 !important;  /* Space for shadow & scroll */
-   gap: 15px !important;
+    display: flex !important; /* Forces them side-by-side */
+    flex-wrap: nowrap !important; /* Prevents them from jumping to the next line */
+    gap: 15px; /* Space between photos */
+    padding: 10px;
+    width: max-content; /* Makes the row as wide as all photos combined */
 }
 
+/* Ensure the Polaroid boxes don't shrink */
 .photo-row .paper-texture {
-   min-width: 240px !important;  /* CRITICAL: Stops them from squishing! */
-   width: 240px !important;      
-   margin: 0 !important;         /* Removes the "auto" centering */
-   flex-shrink: 0 !important;    /* Forces them to stay full size */
-   scroll-snap-align: center;
+    flex: 0 0 250px !important; /* Stays 250px wide, won't squish */
+    margin: 0 !important;
 }
 
-.photo-row::-webkit-scrollbar {
-   display: nonde;
+/* Optional: Hide the scrollbar for a cleaner look */
+.photo-row-container::-webkit-scrollbar {
+    display: none;
 }
 
 .photo-row {
@@ -560,6 +569,7 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
 
 
 
