@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <style>
+        :root {
+            --pink: #ff4d6d;
+            --dark-pink: #c9184a;
+            --green: #2d6a4f;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff0f3;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        /* The Card Container */
+        .card {
+            width: 300px;
+            height: 400px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.6s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Initial Text */
+        .initial-text {
+            color: var(--pink);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Hidden Content (Reveals on click) */
+        .content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Animated Flower */
+        .flower {
+            width: 100px;
+            height: 150px;
+            position: relative;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .stem {
+            width: 6px;
+            background-color: var(--green);
+            height: 0; /* Grow from 0 */
+            transition: height 1s ease-out;
+            border-radius: 5px;
+        }
+
+        .petal {
+            position: absolute;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--pink);
+            border-radius: 50% 50% 0 50%;
+            transform: scale(0); /* Start tiny */
+            transition: transform 0.5s ease-out 1s; /* Wait for stem */
+        }
+
+        .petal-left  { transform-origin: right bottom; left: 10px; rotate: -45deg; }
+        .petal-right { transform-origin: left bottom; right: 10px; rotate: 45deg; }
+        .petal-top   { top: -20px; border-radius: 50%; width: 50px; height: 50px; }
+
+        /* The Message */
+        .message {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+            opacity: 0;
+            transition: opacity 1s ease-in 1.5s;
+        }
+
+        /* Active State Classes */
+        .card.open .initial-text { display: none; }
+        .card.open .content { display: flex; }
+        .card.open .stem { height: 100px; }
+        .card.open .petal { transform: scale(1); }
+        .card.open .message { opacity: 1; }
+
+    </style>
+</head>
+<body>
+
+    <div class="card" onclick="openCard(this)">
+        <div class="initial-text">
+            ❤️ Click Me ❤️<br>
+            Happy Valentine's Day!
+        </div>
+
+        <div class="content">
+            <div class="flower">
+                <div class="stem"></div>
+                <div class="petal petal-top"></div>
+                <div class="petal petal-left"></div>
+                <div class="petal petal-right"></div>
+            </div>
+            <div class="message">
+                <strong>My Dearest,</strong><br><br>
+                Just like this flower, my love for you grows every single day. 
+                Thank you for being my Valentine. I love you! ❤️
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCard(card) {
+            card.classList.add('open');
+        }
+    </script>
+</body>
+</html>
