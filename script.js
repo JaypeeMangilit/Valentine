@@ -556,14 +556,4 @@ function logout() {
 
 }
 
-/* --- GALLERY SCROLL FUNCTION --- */
-function scrollGallery(direction) {
-    const container = document.getElementById('gallery-row');
-    const scrollAmount = 260; // Width of card + gap
-    
-    // Smoothly scroll left or right
-    container.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
-    });
-}
+
