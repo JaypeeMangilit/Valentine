@@ -228,12 +228,12 @@ button:active {
 
 /* --- PAPER TEXTURE --- */
 .paper-texture {
-    background: #fffdf0;
-    padding: 15px;
-    border: 1px solid #d4c5b0;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    transform: rotate(-1deg);
-    margin: 20px 0;
+   width: 250px;
+   margin: 20px auto;
+   padding: 10px;
+   background: #fff;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
 }
 .letter-img {
     width: 100%;
@@ -526,3 +526,4 @@ button:active {
     /* High Z-Index so it sits ON TOP of the list */
     z-index: 30; 
 }
+
